@@ -45,11 +45,6 @@ class Queue:
     def isEmpty(self):
         print(self.head == None)
     
-    def size(self):
-        if self.head is None:
-            print("No elements in queue")
-        else:
-            print("Size of queue ",)
 
     
 queue = Queue()

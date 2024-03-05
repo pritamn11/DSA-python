@@ -35,8 +35,9 @@ class singlyLinkedList:
 
 sll = singlyLinkedList()
 sll.addBegin(10)
-sll.addBegin(20)
-sll.addBegin(30)
+# sll.addBegin(20)
+# sll.addBegin(30)
 sll.addEnd(100)
 sll.addEnd(200)
+sll.addEnd(300)
 sll.displayLinkedList()

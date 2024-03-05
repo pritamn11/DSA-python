@@ -41,6 +41,6 @@ q.enqueue(30)
 q.enqueue(40)
 q.enqueue(50)
 q.displayQueue()
-q.dequeue()
-q.displayQueue()
+# q.dequeue()
+# q.displayQueue()
 

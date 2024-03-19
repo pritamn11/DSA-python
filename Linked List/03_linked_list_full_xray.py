@@ -57,14 +57,14 @@ sll3.ref = sll4
 
 
 
-n = sll1.head    #self.head, Node(10)
-print(n.data)
-n = sll1.head.ref   # sll2, Node(20)
-print(n.data)
-n = sll1.head.ref.ref   # sll3, Node(30)
-print(n.data)
-n = sll1.head.ref.ref.ref    # sll4, Node(40)
-print(n.data)
-n = sll1.head.ref.ref.ref.ref    # Null
-print(n)
+# n = sll1.head    #self.head, Node(10)
+# print(n.data)
+# n = sll1.head.ref   # sll2, Node(20)
+# print(n.data)
+# n = sll1.head.ref.ref   # sll3, Node(30)
+# print(n.data)
+# n = sll1.head.ref.ref.ref    # sll4, Node(40)
+# print(n.data)
+# n = sll1.head.ref.ref.ref.ref    # Null
+# print(n)
 

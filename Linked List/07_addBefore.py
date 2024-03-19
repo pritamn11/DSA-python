@@ -46,7 +46,7 @@ class SinglyLinkedList:
             new_node.ref = n.ref
             n.ref = new_node
     
-    def addBefore(self,data,x):
+    def addBefore(self,data,x):    # new_data before which element
         if self.head is None:
             print("Linked List is empty")
             return 
@@ -70,13 +70,13 @@ class SinglyLinkedList:
 
 sll = SinglyLinkedList()
 sll.addEnd(10)
-sll.addEnd(20)
-sll.addBegin(50)
+sll.addEnd(120)
+sll.addEnd(23)
 sll.addEnd(30)
 sll.addBegin(60)
-sll.addAfter(11,20)
-sll.addBefore(110,50) 
+
 sll.addBefore(120,50) 
-sll.addBefore(130,23) 
+sll.addBefore(130,60) 
+sll.addBefore(11,23) 
 sll.displayLinkedList()
 

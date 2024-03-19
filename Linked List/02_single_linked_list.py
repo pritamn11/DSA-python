@@ -7,8 +7,8 @@ class Node:
 
 
 class SinlgeLinkedList:
-    def __init__(self,head = None):
-        self.head = head 
+    def __init__(self):
+        self.head = None
     
     # Traversing through linked list
     def printLinkedList(self):

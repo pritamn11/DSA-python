@@ -13,7 +13,7 @@ class BST:
         if self.key == data:
             return 
         
-        if self.key > data:
+        if data < self.key:
             if self.lchild:
                 self.lchild.insert(data)
             else:
@@ -25,8 +25,11 @@ class BST:
                 self.rchild = BST(data)
 
 
-root = BST(None)
-root.insert(20)
+root = BST(10)
+list1 = [6,3,1,6,98,3,7]
+for i in list1:
+    root.insert(i)
+    
 
 
 

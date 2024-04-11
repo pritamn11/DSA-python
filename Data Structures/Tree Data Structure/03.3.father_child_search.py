@@ -30,6 +30,7 @@ father.add_child(child2)
 father.add_child(mother)
 
 (father.search("Bob"))
+(father.search("Harry"))
 # print(father.search("Mary"))
 # print(father.search("Mike"))
 

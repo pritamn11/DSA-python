@@ -7,9 +7,9 @@ class BST:
 
 
 root = BST(10)
-print(root.key)
-print(root.lchild)
-print(root.rchild)
+# print(root.key)
+# print(root.lchild)
+# print(root.rchild)
 
 root.lchild = BST(5)
 print(root.key)

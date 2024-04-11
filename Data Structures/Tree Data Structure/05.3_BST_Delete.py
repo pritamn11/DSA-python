@@ -1,4 +1,4 @@
-# In order traversal algorithm : lchild -> key -> rchild 
+# Post order traversal algorithm
 
 class BST:
     def __init__(self, key):
@@ -57,6 +57,41 @@ class BST:
         if self.rchild is not None:
             self.rchild.inorder()
 
+    def postorder(self):
+        if self.lchild is not None:
+            self.lchild.postorder()
+        if self.rchild is not None:
+            self.rchild.postorder()
+        print(self.key,end=" ")
+
+
+    def delete(self, data):
+        if self.key is None:
+            print("Tree is empty!")
+            return 
+        
+        if data < self.key:
+            if self.lchild is not None:
+                self.lchild = self.lchild.delete(data)
+            else:
+                print("Given node is not present in tree")
+        elif data > self.key:
+            if self.rchild is not None:
+                self.rchild = self.rchild.delete(data)
+            else:
+                print("Given node is not present in tree")
+        else:
+            if self.lchild is None:
+                temp = self.rchild
+                self = None
+                return temp
+            if self.rchild is None:
+                temp = self.lchild
+                self = None
+                return temp 
+            
+
+
 
  
 root = BST(10)
@@ -65,9 +100,3 @@ list1 = [6,3,1,6,98,3,7]
 for i in list1:
     root.insert(i)
 
-
-print("Preorder")
-root.preorder()
-print()
-print("Inorder")
-root.inorder()

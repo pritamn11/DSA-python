@@ -1,4 +1,4 @@
-# pre-order traversal algorithm
+# pre-order traversal algorithm : key -> lchild -> rchild
 
 class BST:
     def __init__(self, key):
@@ -52,9 +52,9 @@ class BST:
 
         
 root = BST(10)
-list1 = [6,3,1,6,98,3,7]
-# list1 = [6,3,1,25,30,62]
-for i in list1:
+# list1 = [6,3,1,6,98,3,7]
+list1 = [2,3,4,5,6]
+for i in list1: 
     root.insert(i)
 
 root.preorder()

@@ -1,4 +1,4 @@
-# In order traversal algorithm : lchild -> key -> rchild 
+# Post order traversal algorithm
 
 class BST:
     def __init__(self, key):
@@ -57,6 +57,13 @@ class BST:
         if self.rchild is not None:
             self.rchild.inorder()
 
+    def postorder(self):
+        if self.lchild is not None:
+            self.lchild.postorder()
+        if self.rchild is not None:
+            self.rchild.postorder()
+        print(self.key,end=" ")
+
 
  
 root = BST(10)
@@ -71,3 +78,6 @@ root.preorder()
 print()
 print("Inorder")
 root.inorder()
+print()
+print("Postorder")
+root.postorder()

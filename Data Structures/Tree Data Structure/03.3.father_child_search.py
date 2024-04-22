@@ -15,7 +15,7 @@ class Person:
             if child.search(target_name):
                 print("Found")
                 return
-        return "Not Found"
+        print("Not Found")
         
 
 
@@ -29,7 +29,7 @@ father.add_child(child1)
 father.add_child(child2)
 father.add_child(mother)
 
-(father.search("Bob"))
+# (father.search("Bob"))
 (father.search("Harry"))
 # print(father.search("Mary"))
 # print(father.search("Mike"))

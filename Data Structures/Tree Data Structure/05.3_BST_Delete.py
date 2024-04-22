@@ -30,7 +30,7 @@ class BST:
         if self.key == data:
             print("Node is found!")
             return
-        
+         
         if data < self.key:
             if self.lchild:
                 self.lchild.search(data)

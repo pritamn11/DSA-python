@@ -1,4 +1,4 @@
-# Post order traversal algorithm
+# Delete . https://www.youtube.com/watch?v=kDbqMBgVr9s&list=PLzgPDYo_3xukPJdH6hVQ6Iic7KiJuoA-l&index=49
 
 class BST:
     def __init__(self, key):
@@ -66,20 +66,19 @@ class BST:
 
 
     def delete(self, data):
-        if self.key is None:
-            print("Tree is empty!")
-            return 
+        if self.key == None:
+            print("Tree is empty")
         
         if data < self.key:
             if self.lchild is not None:
                 self.lchild = self.lchild.delete(data)
             else:
-                print("Given node is not present in tree")
+                print("Node is not found")
         elif data > self.key:
             if self.rchild is not None:
                 self.rchild = self.rchild.delete(data)
             else:
-                print("Given node is not present in tree")
+                print("Node is not found")
         else:
             if self.lchild is None:
                 temp = self.rchild
@@ -88,15 +87,27 @@ class BST:
             if self.rchild is None:
                 temp = self.lchild
                 self = None
-                return temp 
-            
-
+                return temp
+            node = self.rchild
+            while node.lchild:
+                node = node.lchild
+            self.key = node.key
+            self.rchild = self.rchild.delete(node.key)
+        return self
 
 
  
 root = BST(10)
-list1 = [6,3,1,6,98,3,7]
-# list1 = [6,3,1,25,30,62]
+list1 = [6,3,1,6,98,95,100,3,7]
+# list1 = [6,3,1,6,3,7]
+
 for i in list1:
     root.insert(i)
+
+# root.inorder()
+
+root.delete(10)
+
+print(root.key)
+
 

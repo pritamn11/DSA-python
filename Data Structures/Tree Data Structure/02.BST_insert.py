@@ -14,12 +14,12 @@ class BST:
             return 
         
         if data < self.key:
-            if self.lchild:
+            if self.lchild is not None:
                 self.lchild.insert(data)
             else:
                 self.lchild = BST(data)
         else:
-            if self.rchild:
+            if self.rchild is not None:
                 self.rchild.insert(data)
             else:
                 self.rchild = BST(data)

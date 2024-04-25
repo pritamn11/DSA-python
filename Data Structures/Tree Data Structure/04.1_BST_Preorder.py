@@ -15,12 +15,12 @@ class BST:
             return
         
         if data > self.key:
-            if self.rchild:
+            if self.rchild is not None:
                 self.rchild.insert(data)
             else:
                 self.rchild = BST(data)
         else:
-            if self.lchild:
+            if self.lchild is not None:
                 self.lchild.insert(data)
             else:
                 self.lchild = BST(data)
@@ -32,12 +32,12 @@ class BST:
             return
         
         if data < self.key:
-            if self.lchild:
+            if self.lchild is not None:
                 self.lchild.search(data)
             else:
                 print("Node is not present in tree!")
         else:
-            if self.rchild:
+            if self.rchild is not None:
                 self.rchild.search(data)
             else:
                 print("Node is not present in tree!")
@@ -52,8 +52,8 @@ class BST:
 
         
 root = BST(10)
-# list1 = [6,3,1,6,98,3,7]
-list1 = [2,3,4,5,6]
+list1 = [6,3,1,6,98,3,7]
+# list1 = [2,3,4,5,6]
 for i in list1: 
     root.insert(i)
 

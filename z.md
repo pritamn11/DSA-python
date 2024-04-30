@@ -4,8 +4,8 @@ Sorting Algorithms:
 
 Bubble Sort, Selection Sort, Insertion Sort: These are simple sorting algorithms that are good for understanding basic concepts but are not very efficient.
 Merge Sort, Quick Sort: These are more efficient sorting algorithms that are commonly used in practice. Understanding them provides insights into divide-and-conquer strategies and recursion.
-Search Algorithms:
 
+Search Algorithms:
 Linear Search: A simple search algorithm that iterates through all elements to find the target.
 Binary Search: A more efficient search algorithm that requires the data to be sorted and operates by repeatedly dividing the search interval in half.
 Graph Algorithms:

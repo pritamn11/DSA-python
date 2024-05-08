@@ -1,5 +1,5 @@
 l1 = [1,2,4,6,10,11,12]
-
+ 
 low = 0
 high = len(l1) - 1
 flag = False
@@ -10,7 +10,7 @@ while not flag and low <= high:   # until low is less than equal to high, This l
     print("Mid ",mid)
     print(low <= high)
     print(10*"-")
-    key = 3
+    key = 10
     if key == l1[mid]:
         print("key found at index", mid)
         flag = True

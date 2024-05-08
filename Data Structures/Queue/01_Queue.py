@@ -54,12 +54,13 @@ queue.enqueue(30)
 queue.enqueue(40)
 
 queue.displayQueue()
-queue.dequeue()
-queue.dequeue()
-queue.dequeue()
-queue.dequeue()
+# queue.dequeue()
+# queue.dequeue()
+# queue.dequeue()
+# queue.dequeue()
 
 queue.peek()
-queue.isEmpty()
-queue.displayQueue()
+# queue.isEmpty()
+# queue.displayQueue()
 
+ 

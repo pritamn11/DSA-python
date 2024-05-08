@@ -1,20 +1,55 @@
-class MyClass:
-    def __init__(self, value):
-        self.value = value
 
-    def return_self(self):
-        if self.value > 10:
-            return self
-        elif self.value < 10:
-            self = None 
-        
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
 
-# Create an instance of MyClass
-obj = MyClass(5)
+class Queue:
+    def __init__(self):
+        self.head = None
+        self.tail = None
+    
+    def displayQueue(self):
+        if self.head is None:
+            print("Queue is empty")
+            return 
+        else:
+            n = self.head
+            while n is not None:
+                print(n.data,'-->',end=" ")
+                n = n.next
+            print('null')
+    
+    def enqueue(self, data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+            self.tail = self.head
+        else:
+            self.tail.next = new_node
+            self.tail = new_node
+    
+    def dequeue(self):
+        if self.head is None:
+            print("Queue is empty")
+        else:
+            print(self.head.data) 
+            self.head = self.head.next
+    
+    def peek(self):
+        if self.head is None:
+            print("Queue is empty")
+        else:
+            print(self.head.data)
 
-# Call the return_self method, which returns the instance itself
-returned_obj = obj.return_self()
 
-# Check if the returned object is the same as the original object
-# print(returned_obj is obj)  # Output: True
-print(returned_obj)  # Output: True
+q = Queue()
+q.enqueue(10)
+q.enqueue(20)
+q.enqueue(30)
+
+q.displayQueue()
+
+q.dequeue()
+q.displayQueue()
+q.peek()

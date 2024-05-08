@@ -14,4 +14,4 @@ How does it work?
 *Dequeue: When it's someone's turn to be served, they're taken from the front of the line and served. This operation is called "dequeuing."
 *Peek: You can also peek at the front of the line to see who's next to be served without removing them from the queue.
 *IsEmpty: You can check if the queue is empty, meaning there's no one in line.*
-Size: You can also find out how many people are in line.
+Size: You can also find out how many people are in line. 

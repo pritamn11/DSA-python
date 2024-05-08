@@ -34,7 +34,7 @@ father.add_child(mother)
 
 father.show_child()
 
-# (father.search("Bob"))
+(father.search("Bob"))
 # (father.search("Harry"))
 # print(father.search("Mary"))
 # print(father.search("Mike"))

@@ -1,5 +1,5 @@
 arr = [25,1,7]
-
+ 
 n = len(arr)
 
 for i in range(n):

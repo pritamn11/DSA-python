@@ -64,51 +64,60 @@ class BST:
             self.rchild.postorder()
         print(self.key,end=" ")
 
-
-    def delete(self, data):
-        if self.key == None:
-            print("Tree is empty")
-        
+    
+    def delete(self, data, curr):    
         if data < self.key:
             if self.lchild is not None:
-                self.lchild = self.lchild.delete(data)
+                self.lchild = self.lchild.delete(data, curr)
             else:
-                print("Node is not found")
+                print("Node is not present")
         elif data > self.key:
             if self.rchild is not None:
-                self.rchild = self.rchild.delete(data)
+                self.rchild = self.rchild.delete(data, curr)
             else:
-                print("Node is not found")
+                print("Node is not present")
         else:
             if self.lchild is None:
                 temp = self.rchild
+                if data == curr:
+                    self.key = temp.key
+                    self.lchild = temp.lchild
+                    self.rchild = temp.rchild
+                    temp = None 
+                    return
                 self = None
                 return temp
             if self.rchild is None:
                 temp = self.lchild
+                if data == curr:
+                    self.key = temp.key
+                    self.lchild = temp.lchild
+                    self.rchild = temp.rchild
+                    temp = None 
+                    return
                 self = None
                 return temp
             node = self.rchild
             while node.lchild:
                 node = node.lchild
             self.key = node.key
-            self.rchild = self.rchild.delete(node.key)
+            self.rchild = self.rchild.delete(node.key, curr)
         return self
+
 
 
  
 root = BST(10)
-list1 = [6,3,1,6,98,95,100,3,7]
+list1 = [3,4]
 # list1 = [6,3,1,6,3,7]
 
 for i in list1:
     root.insert(i)
 
-# root.inorder()
-
-root.delete(100)
+root.preorder()
 print()
-# print(root.key)
-root.inorder()
+root.delete(10,root.key)
+print()
+root.preorder()
 
 

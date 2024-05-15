@@ -1,5 +1,4 @@
-# Why we again write code for deletion of root node, because previously we are delete root node in
-# case of which have two nodes left & right, what if root node is leaf node or 1 child node.
+# find minimum element in tree
  
 
 class BST:
@@ -109,6 +108,17 @@ class BST:
             self.rchild = self.rchild.delete(node.key, curr) 
         return self
 
+    def find_min(self):
+        current = self
+        while current.lchild is not None:
+            current = current.lchild
+        print("Node with smallest key is", current.key)
+
+    def find_max(self):
+        current = self
+        while current.rchild is not None:
+            current = current.rchild
+        print("Node with max key is", current.key)
 
 def count(node):
     if node is None:
@@ -117,24 +127,15 @@ def count(node):
  
 
  
-root = BST(10)    # only one node i.e leaf node
-list1 = [3,4]
+root = BST(10)   
+list1 = [6,3,1,6,3,7,98]
 
 for i in list1:
     root.insert(i)
+ 
 
-# print(count(root))
 root.preorder()
 print()
-
-
-if count(root)>1:
-    root.delete(10, root.key)
-else:
-    print("can't perform delete operation")
-
-# root.delete(10, root.key)
-print()
-root.preorder()
-
+root.find_min()
+root.find_max()
 

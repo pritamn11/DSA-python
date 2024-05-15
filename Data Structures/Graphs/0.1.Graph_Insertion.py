@@ -23,7 +23,9 @@ def print_graph():
 nodes = []
 graph = []
 node_count = 0
-
+print("Before adding nodes")
+print(nodes)
+print(graph)
 add_node("A") 
 add_node("B")   
 add_node("C") 

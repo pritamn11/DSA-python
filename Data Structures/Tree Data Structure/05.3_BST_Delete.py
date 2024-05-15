@@ -98,17 +98,22 @@ class BST:
 
  
 root = BST(10)
-list1 = [6,3,1,6,98,95,100,3,7]
-# list1 = [6,3,1,6,3,7]
+# list1 = [6,3,1,6,98,95,100,3,7]
+list1 = [6,3,1,6,3,7,98]
 
 for i in list1:
     root.insert(i)
 
 # root.inorder()
 
-root.delete(100)
+root.delete(10)
 print()
 # print(root.key)
 root.inorder()
 
+
+# if the delete method is designed to return the updated tree after deleting a node, 
+# then assigning self.lchild = self.lchild.delete(data) ensures that the changes are 
+# reflected in the tree structure. If you don't assign it back, the changes won't be 
+# captured, and you won't see the effect of the deletion operation on the tree structure.
 

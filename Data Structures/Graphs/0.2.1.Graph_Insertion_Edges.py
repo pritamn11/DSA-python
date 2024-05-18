@@ -1,4 +1,5 @@
 # Function to add an edge using adjacency matrix representation 
+# This is unweighted, undirected graph
 
 def add_node(v):
     global node_count

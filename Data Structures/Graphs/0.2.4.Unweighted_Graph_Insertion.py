@@ -1,5 +1,5 @@
 # Function to add an edge using adjacency matrix representation 
-# This is weighted directed graph
+# This is unweighted directed graph
 
 def add_node(v):
     global node_count
@@ -16,7 +16,7 @@ def add_node(v):
         graph.append(temp)
 
 
-def insert_edge(node1, node2,cost):
+def insert_edge(node1, node2):
     if node1 not in nodes:
         print(node1,"is not present in graph")
     elif node2 not in nodes:
@@ -24,7 +24,7 @@ def insert_edge(node1, node2,cost):
     else:
         index1 = nodes.index(node1)
         index2 = nodes.index(node2)
-        graph[index1][index2] = cost
+        graph[index1][index2] = 1
         # graph[index2][index1] = cost    # we dont need these line becz it is a directed graph
                                           # from A -> B has cost 10 not A <-> B thats y
 
@@ -44,7 +44,7 @@ add_node("B")
 add_node("C") 
 add_node("D") 
 
-insert_edge('A','B',10)  
-insert_edge('A','D',5)    
+insert_edge('A','B')  
+insert_edge('A','D')    
 print_graph()
 

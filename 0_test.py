@@ -35,7 +35,6 @@ def print_graph():
 
 
 
-
 nodes = []
 graph = []
 node_count = 0 

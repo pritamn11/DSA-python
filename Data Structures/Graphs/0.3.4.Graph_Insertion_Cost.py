@@ -18,6 +18,7 @@ def add_edge(node1,node2,cost):
         graph[node1].append(list1)
         # graph[node2].append(list2) 
 
+
 graph = {}
 add_node('A')
 add_node('B')

@@ -18,15 +18,27 @@ def add_edge(node1,node2,cost):
         graph[node1].append(list1)
         # graph[node2].append(list2) 
 
- 
+def delete_node(node):
+    if node not in graph:
+        print(f"{node} not present in graph")
+    else:
+        graph.pop(node)
+
+
+
+
 graph = {}
 add_node('A')
 add_node('B')
 add_node('C')
 add_node('D')
-print(graph)
+
 add_edge('A','D',4)
-add_edge('B','D',5)
-add_edge('A','C',6)
+add_edge('B','D',7)
+add_edge('C','A',5)
+add_edge('A','B',10)
+add_edge('D','C',1)
 print(graph)
 
+delete_node('A')
+print(graph)

@@ -43,7 +43,7 @@ add_node("A")
 add_node("B")   
 add_node("C") 
 add_node("D") 
-
+print(nodes)
 insert_edge('A','B')  
 insert_edge('A','D')    
 print_graph()

@@ -8,3 +8,4 @@ class Node:
 
 node1 = Node(5)
 print(node1)       # this will print the address/location of data
+ 

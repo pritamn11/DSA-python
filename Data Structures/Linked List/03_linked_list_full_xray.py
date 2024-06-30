@@ -31,16 +31,16 @@ sll3.ref = sll4
 # sll4.ref = None
 
 
-# n = sll1.head    #self.head, Node(10)
-# print(n.data)
-# n = sll1.head.ref   # sll2, Node(20)
-# print(n.data)
-# n = sll2.ref   # sll3, Node(30)
-# print(n.data)
-# n = sll3.ref    # sll4, Node(40)
-# print(n.data)
-# n = sll4.ref    # Null
-# print(n)
+n = sll1.head    #self.head, Node(10)
+print(n.data)  # 10
+n = sll1.head.ref   # sll2, Node(20)
+print(n.data)  # 20
+n = sll2.ref   # sll3, Node(30)
+print(n.data)  # 30
+n = sll3.ref    # sll4, Node(40)
+print(n.data)   # 40
+n = sll4.ref    # Null
+print(n)   # None
 
 
 

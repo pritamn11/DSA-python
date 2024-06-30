@@ -5,7 +5,7 @@ class Node:
         self.data = data
         self.ref = None 
 
-
+ 
 class SinlgeLinkedList:
     def __init__(self):
         self.head = None

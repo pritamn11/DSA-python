@@ -1,46 +1,30 @@
-class Node:
+class TreeNode:
     def __init__(self, data):
         self.data = data
-        self.ref = None
+        self.left = None
+        self.right = None
 
-class SinglyLinkedList:
-    def __init__(self):
-        self.head = None
-    
-    def displayLinkedList(self):
-        if self.head is None:
-            print("Linked list is empty")
+    def insert(self, data):
+        if self.data is None:
+            self.data = data
         else:
-            n = self.head
-            while n is not None:
-                print(n.data,"-->",end=" ")
-                n = n.ref
+            if data < self.data:
+                if self.left is None:
+                    self.left = TreeNode(data)
+                else:
+                    self.left.insert(data)
+            elif data > self.data:
+                if self.right is None:
+                    self.right = TreeNode(data)
+                else:
+                    self.right.insert(data)
 
-    def addBegin(self, data):
-        new_node = Node(data)
-        new_node.ref = self.head 
-        self.head = new_node
-    
-    def addLast(self, data):
-        new_node = Node(data)
-        if self.head is None:
-            self.head = new_node 
-        else:
-            n = self.head
-            while n.ref is not None:
-                n = n.ref
-            n.ref = new_node
-            
-
-sll = SinglyLinkedList()
-sll.addBegin(30)
-sll.addBegin(20)
-sll.addBegin(10)
-
-sll.addLast(100)
-
-sll.displayLinkedList()
-
-
+def inOrderPrint(r):
+    if r is None:
+        return
+    else:
+        inOrderPrint(r.left)
+        print(r.data, end=" ")
+        inOrderPrint(r.right)
 
 

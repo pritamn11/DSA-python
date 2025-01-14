@@ -30,6 +30,3 @@ list1 = [6,3,1,6,98,3,7]
 for i in list1:
     root.insert(i)
     
-
-
-
